@@ -124,22 +124,11 @@ Every delivery ends with the theme it picked, e.g. *"Theme: dusty rose + off-whi
 
 ## 🧭 How it works
 
-```mermaid
-flowchart LR
-    A(["Your footage or script"]) --> B["Analyze: transcript, cuts, hook, outfit colour"]
-    B --> C["Plan layers timed to the words"]
-    C --> D["Build in Remotion: captions, half-screens, B-roll, UI, music, SFX, mix"]
-    D --> E{"Premium self-check"}
-    E -->|looks cheap| D
-    E -->|documentary-grade| F(["Finished MP4, under 30 MB, -14 LUFS"])
+<div align="center">
+<img src="assets/pipeline.png" alt="Pipeline: analyze, theme and plan, build, self-check, finished MP4" width="100%">
+</div>
 
-    classDef io fill:#1A1714,stroke:#CDB38A,color:#EDE8DF
-    classDef step fill:#121110,stroke:#5E5348,color:#EDE8DF
-    classDef check fill:#2A211C,stroke:#D9A0AE,color:#EDE8DF
-    class A,F io
-    class B,C,D step
-    class E check
-```
+<br>
 
 Before the full render, Claude builds a contact sheet of 8–12 stills and asks of each one: *"Would this sit in a Netflix documentary title sequence?"* Anything childish, toy-like, meme-like or over-coloured gets replaced first.
 
@@ -235,7 +224,7 @@ Video-Editing-Skill/
 │   └── creator-explainer-style/
 │       └── SKILL.md                    the opt-in creator-explainer look
 ├── source/                             the original house-style document, unchanged
-├── assets/                             README images (+ their HTML sources in assets/src)
+├── assets/                             README images: banner, themes, pipeline (+ HTML sources)
 ├── scripts/
 │   ├── install.sh                      symlink the skills into ~/.claude/skills
 │   ├── package.sh                      build claude.ai upload zips into dist/

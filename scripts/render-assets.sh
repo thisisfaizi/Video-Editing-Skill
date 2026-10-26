@@ -10,5 +10,6 @@ render() { # name width height
   echo "rendered assets/$1.png"
 }
 render banner 1280 640
-[ -f "$repo/assets/src/themes.html" ] && render themes 1280 420
+render themes 1280 420
+render pipeline 1280 400
 true

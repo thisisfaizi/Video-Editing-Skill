@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Source for assets/pipeline.png. Render: ./scripts/render-assets.sh -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1280px;height:400px;overflow:hidden}
+  body{background:radial-gradient(ellipse 90% 80% at 50% 30%,#1A1714,#0C0B0A 75%);font-family:Inter,sans-serif;color:#EDE8DF;padding:52px 64px}
+  .label{display:flex;align-items:center;gap:16px;font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:rgba(237,232,223,.55)}
+  .label i{flex:1;height:1px;background:linear-gradient(90deg,rgba(205,179,138,.7),transparent)}
+  .row{display:flex;align-items:stretch;margin-top:44px}
+  .step{flex:1;border-radius:22px;padding:22px 20px;background:rgba(255,255,255,.03);box-shadow:0 0 0 1px rgba(237,232,223,.09),0 20px 40px rgba(0,0,0,.35);position:relative}
+  .step.end{box-shadow:0 0 0 1px rgba(205,179,138,.55),0 20px 50px rgba(205,179,138,.08)}
+  .step.check{box-shadow:0 0 0 1px rgba(217,160,174,.45),0 20px 40px rgba(0,0,0,.35)}
+  .n{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:40px;line-height:1;color:#CDB38A}
+  .check .n{color:#D9A0AE}
+  h3{margin-top:14px;font-size:17px;font-weight:600}
+  p{margin-top:8px;font-size:13px;line-height:1.5;color:rgba(237,232,223,.58)}
+  .arrow{width:34px;display:flex;align-items:center;justify-content:center}
+  .arrow i{display:block;width:18px;height:1px;background:rgba(205,179,138,.7);position:relative}
+  .arrow i:after{content:"";position:absolute;right:-1px;top:-3px;border-left:6px solid rgba(205,179,138,.7);border-top:3.5px solid transparent;border-bottom:3.5px solid transparent}
+  .loop{position:absolute;left:24px;right:24px;bottom:-34px;font-size:12px;color:rgba(217,160,174,.8);letter-spacing:.04em;text-align:center}
+</style></head>
+<body>
+  <div class="label">From one sentence to a finished film <i></i></div>
+  <div class="row">
+    <div class="step"><div class="n">i.</div><h3>Analyze</h3><p>Transcript, cuts, hook, key words and the outfit + background colours</p></div>
+    <div class="arrow"><i></i></div>
+    <div class="step"><div class="n">ii.</div><h3>Theme &amp; plan</h3><p>One accent from the outfit; every layer timed to the spoken word</p></div>
+    <div class="arrow"><i></i></div>
+    <div class="step"><div class="n">iii.</div><h3>Build</h3><p>Captions, half-screens, B-roll, liquid-glass UI, music and SFX in Remotion</p></div>
+    <div class="arrow"><i></i></div>
+    <div class="step check"><div class="n">iv.</div><h3>Self-check</h3><p>8–12 stills: “would this sit in a Netflix title sequence?”</p><div class="loop">↺ anything cheap goes back to build</div></div>
+    <div class="arrow"><i></i></div>
+    <div class="step end"><div class="n">v.</div><h3>Finished MP4</h3><p>Under 30 MB, −14 LUFS, theme named in the reply</p></div>
+  </div>
+</body></html>
