@@ -126,12 +126,12 @@ Every delivery ends with the theme it picked, e.g. *"Theme: dusty rose + off-whi
 
 ```mermaid
 flowchart LR
-    A([🎥 Your footage<br/>or script]) --> B[Analyze<br/><sub>transcript · cuts · hook<br/>outfit + background colour</sub>]
-    B --> C[Plan layers<br/><sub>timed to the spoken words</sub>]
-    C --> D[Build in Remotion<br/><sub>captions → half-screens → B-roll<br/>→ UI → music → SFX → mix</sub>]
-    D --> E{Premium<br/>self-check}
-    E -- "looks cheap" --> D
-    E -- "documentary-grade" --> F([✅ Finished MP4<br/><sub>under 30 MB · −14 LUFS</sub>])
+    A(["Your footage or script"]) --> B["Analyze: transcript, cuts, hook, outfit colour"]
+    B --> C["Plan layers timed to the words"]
+    C --> D["Build in Remotion: captions, half-screens, B-roll, UI, music, SFX, mix"]
+    D --> E{"Premium self-check"}
+    E -->|looks cheap| D
+    E -->|documentary-grade| F(["Finished MP4, under 30 MB, -14 LUFS"])
 
     classDef io fill:#1A1714,stroke:#CDB38A,color:#EDE8DF
     classDef step fill:#121110,stroke:#5E5348,color:#EDE8DF
