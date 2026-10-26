@@ -31,7 +31,7 @@ Sparse and deep, with long natural tails. Nothing literal or cartoonish.
 - A faint shimmer, only on the title and the end card.
 - An atmospheric bed.
 
-## The three passes (footage reels)
+## The three passes
 
 1. **Whooshes:**
    - Deep voice by default.
