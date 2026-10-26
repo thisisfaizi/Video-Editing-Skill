@@ -1,139 +1,292 @@
+<div align="center">
+
+<img src="assets/banner.png" alt="Video Editing Skill: Edit karo. Get a film." width="100%">
+
+<br>
+
 # Video Editing Skill for Claude
 
-A complete video-editing **house style** packaged as two [Claude Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview). With them, Claude edits talking-head reels, shorts, product reels and narration/biography videos in **Remotion**. The result should look like a Netflix / Apple TV documentary title sequence, not a meme edit.
+**A premium short-form video-editing house style, packaged as Claude Agent Skills.**<br>
+Say *"edit karo"* and get back a finished, Netflix-grade reel instead of a plan.
 
-Ask Claude to *"edit karo"*. It analyzes the footage, picks a colour theme from the speaker's outfit, then builds captions, Apple liquid-glass UI, half-screens, B-roll, original music and layered sound design. It renders and delivers the finished MP4 in the same turn.
+<br>
 
-| Skill | When it runs | What it does |
-|---|---|---|
-| [`short-form-video-editing`](skills/short-form-video-editing/SKILL.md) | **Default** for every edit | Captions below the face, Apple liquid-glass / Dynamic-Island UI motion, half-screens, cinematic B-roll, premium cinematic language for narration videos, an outfit-matched theme, original music, three-pass SFX |
-| [`creator-explainer-style`](skills/creator-explainer-style/SKILL.md) | **Opt-in only** ("is style mein", "behind-me captions wala") | Captions behind the person, white subtitle pills, glowing stat count-ups, 3D-tilted B-roll, 50/50 splits, a beat-driven bed with sub-booms |
+[![Claude Skill](https://img.shields.io/badge/Claude-Agent_Skill-CDB38A?style=for-the-badge&logo=claude&logoColor=CDB38A&labelColor=0C0B0A)](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
+[![Remotion](https://img.shields.io/badge/Built_in-Remotion-EDE8DF?style=for-the-badge&logo=react&logoColor=EDE8DF&labelColor=0C0B0A)](https://www.remotion.dev/)
+[![Release](https://img.shields.io/github/v/release/thisisfaizi/Video-Editing-Skill?style=for-the-badge&labelColor=0C0B0A&color=D9A0AE)](https://github.com/thisisfaizi/Video-Editing-Skill/releases/latest)
+[![Stars](https://img.shields.io/github/stars/thisisfaizi/Video-Editing-Skill?style=for-the-badge&labelColor=0C0B0A&color=A9C7E8&logo=github&logoColor=A9C7E8)](https://github.com/thisisfaizi/Video-Editing-Skill/stargazers)
 
----
+[**Install**](#-install) · [**Usage**](#-usage) · [**How it works**](#-how-it-works) · [**The style**](#-the-style) · [**Make it yours**](#-make-it-your-own)
 
-## Contents
+</div>
 
-- [What the house style enforces](#what-the-house-style-enforces)
-- [Install](#install)
-- [How to use it](#how-to-use-it)
-- [Toolchain the skill expects](#toolchain-the-skill-expects)
-- [Repository layout](#repository-layout)
-- [Keeping the skill current](#keeping-the-skill-current)
-- [Rule precedence and known tensions](#rule-precedence-and-known-tensions)
+<br>
 
----
+> [!NOTE]
+> This is a real creator's house style, built from 22 rounds of feedback on real edits. Every rule in it exists because an earlier render got it wrong.
 
-## What the house style enforces
+## ✦ What's inside
 
-**22 user corrections** sit at the top of the default skill. Each one is feedback from a real edit, and they override everything else. The main ones:
+<table>
+<tr>
+<td width="50%" valign="top">
 
-- **Deliver, don't pitch.** "Edit karo" means the finished MP4, not a plan.
-- **The full package on every reel:** captions, a full-screen animation, 2–4 B-roll cutaways, half-screens, PNG/logo UI over the video, and music. A layer is dropped only when that reel's brief says so.
-- **Never black out the frame.** The real video stays visible around every UI element.
-- **Apple liquid glass:** clear refractive glass, squircles, one container that morphs between states, letter-by-letter blur text, springs and motion blur.
-- **Premium colour:** one restrained palette per video, lifted warm blacks, one muted accent at ≤ 55% saturation, a cinematic grade and grain. No rainbow, neon or CSS-gradient "gold".
-- **Editorial type:** a display serif for hero words and a light sans for labels. No Montserrat-900-all-caps "YouTube bold".
-- **Cinematic, never cartoon:** slow dolly moves, long eases, light-driven reveals. No slams, shakes, flashes, spins, clip-art or toy 3D.
-- **A theme from the outfit:** Claude samples the outfit and background colours (k-means in CIELAB) and builds one accessible theme with ≥ 4.5:1 caption contrast.
-- **Real sound:** original music ~10 dB under the voice, a −14 LUFS master, and sparse, deep, layered SFX.
-- **Face hiding with zero leaks:** a real, face-sized flower photo tracked in every frame.
-- **A premium self-check:** a contact sheet of 8–12 stills, each judged against a documentary title sequence, before the full render.
+### 🎬 `short-form-video-editing`
+**The default, used for every edit.**
 
-It also follows a **Golden Rule**: references teach style and quality, never content. Every video gets original captions, animations and UI built around what *this* speaker is saying.
+Talking-head reels, shorts, product reels, intros and outros, and narration/biography videos built from a script.
 
-## Install
+- Captions below the face, with one serif hero word
+- Apple liquid-glass UI and Dynamic-Island morphs
+- Half-screens, B-roll cutaways and full-screen scenes
+- A colour theme sampled from the speaker's outfit
+- Original music and three-pass sound design
 
-### Claude Code (macOS / Linux)
+[Read the skill →](skills/short-form-video-editing/SKILL.md)
+
+</td>
+<td width="50%" valign="top">
+
+### 🎙️ `creator-explainer-style`
+**Opt-in, only when you ask for it.**
+
+The explainer-shorts look, triggered by *"is style mein"* or *"behind-me captions wala"*.
+
+- Key captions **behind** the person (rembg cut-out)
+- White subtitle pills on every phrase
+- Glowing stat numbers that count up
+- 3D-tilted B-roll with depth of field, 50/50 splits
+- A beat-driven bed with sub-booms on reveals
+
+[Read the skill →](skills/creator-explainer-style/SKILL.md)
+
+</td>
+</tr>
+</table>
+
+## ⚡ Install
+
+<details open>
+<summary><b>Claude Code</b> (macOS / Linux)</summary>
+
+<br>
 
 ```bash
 git clone https://github.com/thisisfaizi/Video-Editing-Skill.git
 cd Video-Editing-Skill
-./scripts/install.sh            # symlinks both skills into ~/.claude/skills/
+./scripts/install.sh        # symlinks both skills into ~/.claude/skills/
 ```
 
-The skills are symlinked, so a `git pull` updates them in place. To install into a single project instead:
+The skills are symlinked, so `git pull` updates them in place. To install into one project only:
 
 ```bash
 ./scripts/install.sh /path/to/project/.claude/skills
 ```
 
-To install by hand, copy or symlink each folder under `skills/` into `~/.claude/skills/`.
+</details>
 
-### Claude.ai (web / desktop app)
+<details>
+<summary><b>Claude.ai</b> (web and desktop app)</summary>
 
-1. Download `short-form-video-editing.zip` and `creator-explainer-style.zip` from the [latest release](https://github.com/thisisfaizi/Video-Editing-Skill/releases/latest), or build them yourself with `./scripts/package.sh` (they land in `dist/`).
-2. In Claude, go to **Settings → Capabilities → Skills** and upload each zip.
-3. Make sure code execution is enabled. The skill renders video, so it needs a sandbox with Node and ffmpeg.
+<br>
 
-## How to use it
+1. Download **`short-form-video-editing.zip`** and **`creator-explainer-style.zip`** from the [latest release](https://github.com/thisisfaizi/Video-Editing-Skill/releases/latest).
+2. In Claude, open **Settings → Capabilities → Skills** and upload both zips.
+3. Turn on code execution. The skill renders video, so it needs Node and ffmpeg in the sandbox.
 
-Talk to Claude normally. The skill replies in Roman Urdu, addressing you as "ap".
+To build the zips yourself, run `./scripts/package.sh`; they land in `dist/`.
 
-| You say | What happens |
-|---|---|
-| `Is reel ko edit karo` + a video | Default style, the full package, the finished MP4 |
-| `Product reel bana do, music nahi chahiye` | Default style without the music layer, for this reel only |
-| `Is video mein meri face chhupa do` | Adds the tracked real-flower face cover |
-| `Yeh script hai, Sadie Sink jaisi biography video banao` | Premium cinematic narration video (§2C), with a Kokoro voiceover if none is supplied |
-| `Is style mein edit karo` / `behind-me captions wala` | Switches to `creator-explainer-style` for that video only |
+</details>
+
+<details>
+<summary><b>Manual</b></summary>
+
+<br>
+
+Copy or symlink each folder in [`skills/`](skills) into `~/.claude/skills/`.
+
+</details>
+
+## 💬 Usage
+
+Talk to Claude normally; the skill replies in Roman Urdu. Attach the video and say what you want:
+
+| You say | You get |
+|:---|:---|
+| `Is reel ko edit karo` | The default style with every layer, delivered as a finished MP4 |
+| `Product reel bana do, music nahi chahiye` | The full package without music, for this reel only |
+| `Is video mein meri face chhupa do` | A real flower photo tracked over the face in every frame |
+| `Yeh script hai, biography video banao` | A cinematic narration film, with a Kokoro voiceover if you don't supply one |
+| `Is style mein edit karo` | Switches to `creator-explainer-style` for this one video |
 | `Yeh 3 reference videos dekho aur seekho` | Frame-by-frame analysis, then a proposed skill update |
 
-Every final message names the colour theme it picked, for example *"Theme: dusty rose + off-white, matched to your pink dupatta and the warm wall."* It also lists any unclear transcript words.
+Every delivery ends with the theme it picked, e.g. *"Theme: dusty rose + off-white, matched to your pink dupatta and the warm wall."*
 
-## Toolchain the skill expects
+## 🧭 How it works
+
+```mermaid
+flowchart LR
+    A([🎥 Your footage<br/>or script]) --> B[Analyze<br/><sub>transcript · cuts · hook<br/>outfit + background colour</sub>]
+    B --> C[Plan layers<br/><sub>timed to the spoken words</sub>]
+    C --> D[Build in Remotion<br/><sub>captions → half-screens → B-roll<br/>→ UI → music → SFX → mix</sub>]
+    D --> E{Premium<br/>self-check}
+    E -- "looks cheap" --> D
+    E -- "documentary-grade" --> F([✅ Finished MP4<br/><sub>under 30 MB · −14 LUFS</sub>])
+
+    classDef io fill:#1A1714,stroke:#CDB38A,color:#EDE8DF
+    classDef step fill:#121110,stroke:#5E5348,color:#EDE8DF
+    classDef check fill:#2A211C,stroke:#D9A0AE,color:#EDE8DF
+    class A,F io
+    class B,C,D step
+    class E check
+```
+
+Before the full render, Claude builds a contact sheet of 8–12 stills and asks of each one: *"Would this sit in a Netflix documentary title sequence?"* Anything childish, toy-like, meme-like or over-coloured gets replaced first.
+
+### Every reel ships with all six layers
+
+| | Layer | What it is |
+|:---:|:---|:---|
+| ✍️ | **Text** | 15–22 captions on key moments, plus a name tag |
+| 🖼️ | **Full-screen animation** | 1–2 Apple-UI or metaphor scenes, 1.5–4 s each |
+| 🎞️ | **B-roll** | 3–4 cinematic cutaways: macro crop, 0.72× slow-mo, light leak, grain |
+| ◐ | **Half-screen** | Video in a rounded top card, the animation over a blurred copy below |
+| 💎 | **Liquid-glass UI** | 5–7 morphing pills, cards and buttons, timed to the exact word |
+| 🎵 | **Music + SFX** | An original track ~10 dB under the voice, plus layered stereo SFX |
+
+## 🎨 The style
+
+<div align="center">
+<img src="assets/themes.png" alt="Outfit-matched colour themes: dusty rose, sage, champagne, ice blue, bronze" width="100%">
+</div>
+
+<br>
+
+**One theme per video, picked by Claude.** It samples the outfit and background (k-means in CIELAB, skin tones filtered out), then builds one accent at 35–55% saturation that reaches ≥ 4.5:1 contrast. Never rainbow, neon or CSS-gradient "gold".
+
+| | ✅ Always | ❌ Never |
+|:---|:---|:---|
+| **Colour** | Lifted warm blacks, off-white `#EDE8DF`, one muted accent, a cinematic grade and grain | Saturated washes, yellow spotlight cones, a different theme per scene |
+| **Type** | A display serif for hero words (Cormorant, Playfair, DM Serif) and a light sans for labels | Montserrat 900 all caps with glow ("YouTube bold") |
+| **Motion** | Springs, letter-by-letter blur, one morphing container, slow dolly moves | Scale slams, camera shake, white flashes, spinning objects, clip-art |
+| **3D** | Real glTF models with HDRI lighting, contact shadows, depth of field | Toy-like primitive models |
+| **Sound** | Rich, layered SFX panned with the motion, one braam on the turning point | Thin "beepy" pops, a whoosh on every cut, cartoon foley in cinematic videos |
+| **Frame** | The real video always visible, a 90px safe margin, consistent radii | Black panels behind animations, overlapping or cut-off text |
+
+<details>
+<summary><b>📜 All 22 user corrections at a glance</b></summary>
+
+<br>
+
+| # | Correction |
+|:---:|:---|
+| 1 | "Edit karo" means the complete video, not a plan |
+| 2 | Never black out the bottom of the frame |
+| 3 | Half-screen: rounded top card + blurred bottom half |
+| 4 | Apple liquid glass and Apple UI motion over footage |
+| 5 | Every animation unique and calm, held 0.6–1.5 s |
+| 6 | Captions clearly below the face |
+| 7 | Rich, premium SFX, never beepy |
+| 8 | Keep the skill current (trends log, reference analysis) |
+| 9 | The full package on every reel |
+| 10 | Face hiding with zero leaks |
+| 11 | A real flower photo, face-sized |
+| 12 | Original music with a drop, ~10 dB under the voice |
+| 13 | B-roll clearly different from the main footage |
+| 14 | Check AI assets can be downloaded before spending credits |
+| 15 | The creator-explainer style is opt-in only |
+| 16 | Premium colour: one restrained palette |
+| 17 | Editorial type, not "YouTube bold" |
+| 18 | Cinematic animation, never cartoon-like |
+| 19 | Sparse, deep, real-sounding cinematic SFX |
+| 20 | A premium self-check on a contact sheet before rendering |
+| 21 | Claude picks the colour theme from the outfit and background |
+| 22 | Soft tonal gradients and a professional finish on every frame |
+
+Full wording: [`SKILL.md`](skills/short-form-video-editing/SKILL.md#user-corrections-never-repeat-these-mistakes)
+
+</details>
+
+## 🧰 Toolchain
 
 The skill installs what it needs as it goes, but an edit runs fastest when these are already present:
 
 | Purpose | Tools |
-|---|---|
+|:---|:---|
 | Composition and render | Node 18+, [Remotion](https://www.remotion.dev/) (`@remotion/three`, `@remotion/motion-blur`), ffmpeg |
-| Transcription and voiceover | `@huggingface/transformers` + `sts-whisper-small` (ONNX), `kokoro-onnx` (voice `af_heart`) |
-| Analysis and colour | Python 3 with `opencv-contrib-python-headless<5`, `scikit-learn`, `scikit-image`, `numpy`, `scipy` |
+| Transcription and voice | `@huggingface/transformers` + `sts-whisper-small` (ONNX), `kokoro-onnx` (voice `af_heart`) |
+| Analysis and colour | Python 3, `opencv-contrib-python-headless<5`, `scikit-learn`, `scikit-image`, `numpy`, `scipy` |
 | Cut-outs | `rembg[cpu]` (`u2net`, `u2net_human_seg`) |
 | Photoreal stills | three.js (GLTFLoader + RGBELoader) + Playwright Chromium |
 
-## Repository layout
+## 📁 Repository layout
 
 ```
 Video-Editing-Skill/
 ├── skills/
 │   ├── short-form-video-editing/
-│   │   ├── SKILL.md                    # corrections 1–22, Golden Rule, layers, order of work, checklist
+│   │   ├── SKILL.md                    corrections 1–22, Golden Rule, layers, workflow, checklist
 │   │   └── references/
-│   │       ├── captions-and-colour.md  # §1 captions, §1A theme sampling + gradient tokens
-│   │       ├── animation.md            # §2A Apple UI motion, §2B full-screen scenes, §2C cinematic
-│   │       ├── sound-design.md         # §3 three-pass sound design + levels
-│   │       ├── procedures.md           # §6 flower, face tracking, B-roll, music + SFX recipes
-│   │       └── trends-log.md           # §5 trends log (checked every edit)
+│   │       ├── captions-and-colour.md  caption placement + theme sampling + gradient tokens
+│   │       ├── animation.md            Apple UI motion · full-screen scenes · cinematic language
+│   │       ├── sound-design.md         three-pass sound design + levels
+│   │       ├── procedures.md           flower, face tracking, B-roll, music + SFX recipes
+│   │       └── trends-log.md           checked at the start of every edit
 │   └── creator-explainer-style/
-│       └── SKILL.md                    # Part 2: the opt-in creator-explainer look
-├── source/
-│   └── video-editing-skill-2026-10-17.md   # the original house-style document, unchanged
+│       └── SKILL.md                    the opt-in creator-explainer look
+├── source/                             the original house-style document, unchanged
+├── assets/                             README images (+ their HTML sources in assets/src)
 ├── scripts/
-│   ├── install.sh                      # symlink the skills into ~/.claude/skills
-│   └── package.sh                      # build claude.ai upload zips into dist/
+│   ├── install.sh                      symlink the skills into ~/.claude/skills
+│   ├── package.sh                      build claude.ai upload zips into dist/
+│   └── render-assets.sh                re-render the README images
 └── CHANGELOG.md
 ```
 
-`SKILL.md` stays short enough to load on every edit. The detailed specs live in `references/`, and Claude opens them only when a step needs them (progressive disclosure).
+`SKILL.md` stays short enough to load on every edit. The detailed specs live in `references/`, and Claude opens them only when a step needs them.
 
-## Keeping the skill current
+## 🛠️ Make it your own
 
-- **Corrections:** when you give feedback on an edit, Claude proposes a new numbered correction. Add it to the corrections list in `SKILL.md`; corrections always win.
-- **Trends log:** at the start of every edit, Claude checks the date in [`trends-log.md`](skills/short-form-video-editing/references/trends-log.md). If it is more than ~4 weeks old, Claude researches current trends and proposes an update.
-- **New references:** Claude analyzes them frame by frame (contact sheets, zoomed crops, spectrograms) before it writes any learnings.
-- **Versions:** record each change in [`CHANGELOG.md`](CHANGELOG.md). For a big rewrite of the style, add a new dated file to `source/`.
+The skill is designed to keep learning:
 
-## Rule precedence and known tensions
+- **Corrections win.** When you give feedback on an edit, Claude proposes a new numbered correction. Add it to `SKILL.md`; corrections override everything else.
+- **Trends stay fresh.** At the start of every edit, Claude checks the date in [`trends-log.md`](skills/short-form-video-editing/references/trends-log.md). If it is more than ~4 weeks old, Claude researches current trends and proposes an update.
+- **References get studied, not copied.** New reference videos are analyzed frame by frame (contact sheets, zoomed crops, spectrograms) before any learnings are written. The **Golden Rule** keeps every video's content original.
 
-1. The user corrections in `SKILL.md`.
-2. The Golden Rule and the mandatory layers.
-3. The reference files.
+<details>
+<summary><b>Rule precedence and known tensions</b></summary>
 
-A few reference lines came from the Apple-UI reference clips and conflict with the later premium corrections. They are kept as written and marked **⚠ precedence** in [`animation.md`](skills/short-form-video-editing/references/animation.md):
+<br>
 
-- The electric yellow `#FFF200` / wallet blue `#2FA8FF` widget accents vs. correction 16 (one muted accent at ≤ 55% saturation).
-- Montserrat 700 caps UI titles vs. correction 17 (editorial serif + light sans).
-- The red tint flash and the spotlight cone in the §2B scenes vs. corrections 16 and 18.
+1. The user corrections in `SKILL.md`
+2. The Golden Rule and the mandatory layers
+3. The reference files
 
-The creator-explainer style deliberately uses brighter colours (mint, lavender, navy, magenta) because the user's reference shorts do. It applies only on request.
+A few lines from the Apple-UI reference clips conflict with the later premium corrections. They are kept as written and marked **⚠ precedence** in [`animation.md`](skills/short-form-video-editing/references/animation.md):
+
+- The electric yellow `#FFF200` / wallet blue `#2FA8FF` widget accents vs. correction 16 (one muted accent, ≤ 55% saturation)
+- Montserrat 700 caps UI titles vs. correction 17 (editorial serif + light sans)
+- The red tint flash and the spotlight cone in the full-screen scenes vs. corrections 16 and 18
+
+The creator-explainer style deliberately uses brighter colours (mint, lavender, navy, magenta) because its reference shorts do. It applies only on request.
+
+</details>
+
+## ⭐ Star history
+
+<a href="https://star-history.com/#thisisfaizi/Video-Editing-Skill&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=thisisfaizi/Video-Editing-Skill&type=Date&theme=dark">
+    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=thisisfaizi/Video-Editing-Skill&type=Date" width="100%">
+  </picture>
+</a>
+
+<br>
+
+<div align="center">
+
+Made by [**Faizi**](https://github.com/thisisfaizi) · [Nowdigiverse](https://nowdigiverse.com)
+
+<sub>If this skill saves you an edit, a ⭐ helps others find it.</sub>
+
+</div>

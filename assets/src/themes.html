@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Source for assets/themes.png. Render: ./scripts/render-assets.sh -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1280px;height:420px;overflow:hidden}
+  body{background:radial-gradient(ellipse 90% 80% at 50% 30%,#1A1714,#0C0B0A 75%);font-family:Inter,sans-serif;color:#EDE8DF;padding:56px 72px}
+  .label{display:flex;align-items:center;gap:16px;font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:rgba(237,232,223,.55)}
+  .label i{flex:1;height:1px;background:linear-gradient(90deg,rgba(205,179,138,.7),transparent)}
+  .row{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;margin-top:40px}
+  .card{border-radius:22px;overflow:hidden;background:rgba(255,255,255,.03);box-shadow:0 0 0 1px rgba(237,232,223,.08),0 20px 40px rgba(0,0,0,.35)}
+  .out{height:64px;position:relative}
+  .out span{position:absolute;left:14px;bottom:10px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);text-shadow:0 1px 4px rgba(0,0,0,.5)}
+  .stage{height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse 80% 70% at 50% 40%,#1E1A17,#0F0E0D)}
+  .stage .s{font-size:13px;font-weight:600;color:#F5F2EC;opacity:.9}
+  .stage .h{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:46px;line-height:1.05}
+  .stage .rule{width:56px;height:1px;margin-top:10px}
+  .hex{padding:12px 14px;font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(237,232,223,.6);display:flex;justify-content:space-between}
+  .hex b{font-weight:600;color:rgba(237,232,223,.9)}
+</style></head>
+<body>
+  <div class="label">One theme per video · sampled from the outfit <i></i></div>
+  <div class="row" id="row"></div>
+<script>
+const T=[["Pink / rose","#C9798C","#D9A0AE"],["Teal hijab","#2F7B6E","#9CCBB8"],["Maroon","#6E1F2B","#D8B98A"],["Navy","#1F2E57","#A9C7E8"],["Black","#1B1B1D","#CDB38A"],["White / cream","#EDE4D3","#C49A62"]];
+document.getElementById('row').innerHTML=T.map(([n,o,a])=>`<div class="card"><div class="out" style="background:linear-gradient(135deg,${o},${o}cc)"><span style="${n.startsWith('White')?'color:#3A3128;text-shadow:none':''}">${n}</span></div><div class="stage"><div class="s">your new</div><div class="h" style="color:${a}">favourite</div><div class="rule" style="background:linear-gradient(90deg,transparent,${a},transparent)"></div></div><div class="hex">accent <b>${a}</b></div></div>`).join('');
+</script>
+</body></html>

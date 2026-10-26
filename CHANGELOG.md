@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-10-26
+
+- The repository is now public.
+- Redesigned the README: banner, badges, a pipeline diagram, a theme palette image, a corrections table and star history.
+- Added `assets/` (README images with HTML sources) and `scripts/render-assets.sh`.
+
 ## 1.0.0 — 2026-10-26
 
 The first packaged release of the house style, version 17 Oct 2026.
