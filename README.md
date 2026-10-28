@@ -279,3 +279,7 @@ Made by [**Faizi**](https://github.com/thisisfaizi) · [Nowdigiverse](https://no
 <sub>If this skill saves you an edit, a ⭐ helps others find it.</sub>
 
 </div>
+
+## License
+
+[MIT](LICENSE) © Muhammad Faizan ([Nowdigiverse](https://nowdigiverse.com))
