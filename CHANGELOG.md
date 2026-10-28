@@ -5,6 +5,7 @@
 - The repository is now public.
 - Redesigned the README: banner, badges, a pipeline diagram, a theme palette image, a corrections table and star history.
 - Added `assets/` (README images with HTML sources) and `scripts/render-assets.sh`.
+- Licensed under MIT (added `LICENSE`).
 
 ## 1.0.0 — 2026-10-26
 
